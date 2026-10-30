@@ -6,11 +6,11 @@ compatibility_date = "2024-11-01"
 # routes = [{ pattern = "yourdomain.com/api/*", zone_name = "yourdomain.com" }]
 
 [vars]
-SUPABASE_URL = "https://sabrzfjjxcsjbjhjozwu.supabase.co/rest/v1/"
+SUPABASE_URL = "https://sabrzfjjxcsjbjhjozwu.supabase.co"
 ADMIN_EMAIL = "benetdonato@gmail.com"
-FROM_EMAIL = "PH Real Estate <notifications@yourdomain.com>"
+FROM_EMAIL = "PH Real Estate <onboarding@resend.dev>"
 # Comma-separated list of allowed browser origins
 ALLOWED_ORIGIN = "https://ph-real-state.pages.dev,http://localhost:5173"
-SITE_URL = "https://ph-real-state.pages.dev/"
+SITE_URL = "https://ph-real-state.pages.dev"
 
-# Secrets (set with `wrangler secret put`): SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY, TURNSTILE_SECRET_KEY (optional)
+# Secrets (set in the Cloudflare dashboard): SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY, TURNSTILE_SECRET_KEY (optional)
