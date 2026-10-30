@@ -1,4 +1,4 @@
-name = "ph-real-estate-api"
+name = "ph-real-state-api"
 main = "src/index.ts"
 compatibility_date = "2024-11-01"
 
