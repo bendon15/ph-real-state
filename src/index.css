@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-slate-700 antialiased; }
+  h1, h2, h3 { @apply font-display text-navy-800 tracking-tight; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-gold; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded px-5 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-gold { @apply btn bg-gold text-white hover:bg-gold-dark; }
+  .btn-navy { @apply btn bg-navy-800 text-white hover:bg-navy-700; }
+  .btn-outline { @apply btn border border-navy-800/30 text-navy-800 hover:bg-navy-50; }
+  .btn-sm { @apply px-3 py-1.5 text-xs; }
+  .input { @apply w-full rounded border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold; }
+  .label { @apply mb-1.5 block text-sm font-medium text-navy-800; }
+  .err { @apply mt-1 text-xs text-red-600; }
+  .wrap { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
