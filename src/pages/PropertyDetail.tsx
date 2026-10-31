@@ -48,7 +48,7 @@ export default function PropertyDetail() {
       <Link to="/properties" className="text-sm text-gold-dark hover:underline">Back to properties</Link>
       <div className="mt-4 grid gap-10 lg:grid-cols-[1fr_380px]">
         <div>
-          <button className="block w-full overflow-hidden rounded-lg bg-navy-800" onClick={() => setLightbox(true)} aria-label="Enlarge photo">
+          <button className="block w-full overflow-hidden rounded-2xl bg-navy-800" onClick={() => setLightbox(true)} aria-label="Enlarge photo">
             <img src={imgs[idx]} alt={`${p.title}, photo ${idx + 1}`} className="aspect-[16/10] w-full object-cover" onError={(e) => { e.currentTarget.src = FALLBACK_IMG }} />
           </button>
           {imgs.length > 1 && (
@@ -61,19 +61,19 @@ export default function PropertyDetail() {
             </div>
           )}
 
-          <h1 className="mt-8 text-4xl font-bold sm:text-5xl">{p.title}</h1>
+          <h1 className="mt-8 text-4xl font-semibold sm:text-5xl">{p.title}</h1>
           <p className="mt-2 text-slate-500">{[p.address, p.city, p.province].filter(Boolean).join(', ')}</p>
-          <p className="mt-4 font-display text-4xl font-bold text-gold-dark">{priceLabel(p)}</p>
+          <p className="mt-4 font-display text-4xl font-semibold text-gold-dark">{priceLabel(p)}</p>
 
-          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 sm:grid-cols-3">
+          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-3">
             {facts.map(([k, v]) => <div key={k} className="bg-white p-4"><dt className="text-xs text-slate-500">{k}</dt><dd className="mt-1 font-semibold text-navy-800">{v}</dd></div>)}
           </dl>
 
-          <h2 className="mt-10 text-3xl font-bold">About this property</h2>
+          <h2 className="mt-10 text-3xl font-semibold">About this property</h2>
           <p className="mt-3 whitespace-pre-line leading-relaxed text-slate-600">{p.description || 'Contact us for full details on this property.'}</p>
 
           {p.amenities.length > 0 && (<>
-            <h2 className="mt-10 text-3xl font-bold">Amenities</h2>
+            <h2 className="mt-10 text-3xl font-semibold">Amenities</h2>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {p.amenities.map((a) => <li key={a} className="flex items-center gap-2 text-slate-600"><span className="h-1.5 w-1.5 rounded-full bg-gold" />{a}</li>)}
             </ul>
@@ -82,8 +82,8 @@ export default function PropertyDetail() {
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-bold">Ask about this property</h2>
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold">Ask about this property</h2>
             <p className="mb-5 mt-1 text-sm text-slate-500">We reply within one business day.</p>
             <InquiryForm type="property" propertyId={p.id} propertyTitle={p.title} compact />
           </div>

@@ -15,7 +15,7 @@ export function Logo({ light = false }: { light?: boolean }) {
         <rect width="100" height="100" rx="16" fill={light ? '#b8935a' : '#0b1f3a'} />
         <path d="M20 54 50 27l30 27v21H20z" fill={light ? '#0b1f3a' : '#b8935a'} />
       </svg>
-      <span className={`font-display text-2xl font-bold ${light ? 'text-white' : 'text-navy-800'}`}>PH Real Estate</span>
+      <span className={`font-display text-2xl font-semibold ${light ? 'text-white' : 'text-navy-800'}`}>PH Real Estate</span>
     </Link>
   )
 }

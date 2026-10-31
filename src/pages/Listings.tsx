@@ -44,10 +44,10 @@ export default function Listings() {
 
   return (
     <div className="wrap py-12">
-      <h1 className="text-5xl font-bold">Properties</h1>
+      <h1 className="text-5xl font-semibold">Properties</h1>
       <p className="mt-2 text-slate-500">{loading ? 'Searching…' : `${count} ${count === 1 ? 'property' : 'properties'} found`}</p>
 
-      <div className="mt-8 grid gap-3 rounded-lg border border-slate-200 bg-navy-50 p-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
         <input className="input lg:col-span-2" placeholder="Search by city, area or title" aria-label="Search" defaultValue={g('q')} key={g('q')} onKeyDown={(e) => e.key === 'Enter' && set('q', e.currentTarget.value)} onBlur={(e) => e.currentTarget.value !== g('q') && set('q', e.currentTarget.value)} />
         <select className="input" aria-label="Buy or rent" value={g('listing')} onChange={(e) => set('listing', e.target.value)}>
           <option value="">Buy or rent</option><option value="sale">For sale</option><option value="rent">For rent</option>
@@ -70,7 +70,7 @@ export default function Listings() {
 
       {error && <p role="alert" className="mt-8 rounded bg-red-50 p-4 text-red-700">{error}</p>}
       {!loading && !error && items.length === 0 && (
-        <div className="mt-10 rounded-lg border border-dashed border-slate-300 p-12 text-center">
+        <div className="mt-10 rounded-2xl border border-dashed border-slate-300 p-12 text-center">
           <p className="font-display text-2xl text-navy-800">No properties match your search</p>
           <p className="mt-1 text-slate-500">Try a different city or widen your price range.</p>
         </div>
